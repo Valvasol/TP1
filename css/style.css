@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background-color: #2f414b;
+    text-align: center;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: -1rem;
+    z-index: 1;
+}
+
+#logo{
+    line-height: 3rem;
+    background-image: url(../img/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: 7.5rem;
+    background-position: center 2rem;
+    padding: 2rem;
+}
+
+h1{
+    visibility: hidden;
+}
+
+#menu{
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+nav ul li{
+    width: 100%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 1.5rem;
+    display: block;
+}
+
+#burger li{
+    width: 2.5rem;
+    text-indent: -400px;
+    overflow: hidden;
+    margin: .8rem 2rem;
+    background: url(../img/menu.png) center center no-repeat;
+    background-size: contain;
+}
+
+#burger li a{
+    height: 2.5rem;
+}
+
+#burger li:last-child{
+    display: none;
+}
+
+nav:target #burger li{
+    width: 1.7rem;
+    background: url(../img/cerrar.png) center center no-repeat;
+    background-size: contain;
+    
+}
+
+nav:target #burger li:first-child{
+    display: none;
+}
+
+nav:target #burger li:last-child{
+    display: block;
+}
+
+.boton{
+    background-color: orange;
+}
+
+#barra{
+    background-color: #2f414b;
+    margin-top: 2rem;
+    position: absolute;
+    width: 100%;
+    top: 3rem;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+nav:target #barra{
+    display: flex;
+    height: calc(100vh - 13.5rem);
+}
+
+img{
+    max-width: 100%;
+}
+
+iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
+
+}
+
+.video{
+    width: 80vw;
+    height: calc(80vw * 315 / 560);
+    max-width: 560px;
+    max-height: 315px;
+}
+
+h2{
+    padding-bottom: 1rem;
+    color: orange;
+}
+
+p{
+    line-height: 1.5rem;
+    margin-bottom: 2rem;   
+}
+
+h3{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#nosotros, #camperitos, #donar {
+    background-color: #fffff8;
+    padding: 2rem 2rem;
+}
+
+#nosotros, #camperitos p{
+    color: #2f414b;
+}
+
+#visitanos, #voluntariado, footer{
+    background-color: #2f414b;
+    padding: 2rem 2rem;
+    color: #fffff8;
+}
+
+#galeria{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: center;   
+    }
+
+#galeria img{
+    margin: .5rem;
+}
+
+.club{
+    margin-top: 3rem;
+}
+
+.club img{
+    margin-bottom: 1rem;
+}
+
+#camperitos h3{
+    color: orange;
+    margin-top: 3rem;
+}
+
+.parrafo{
+    margin-top: 2rem;
+}
+.cont{
+    margin-top: 2rem;
+}
+
+.parrafo ul li, .cont ul li, .cont-1 ol li {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.parrafo ul , .cont ul , .cont ol {
+    margin: 1rem;
+}
+
+.cont-1{
+    display: flex;
+    flex-direction: column-reverse;
+}
+ 
+.txtv2{
+    margin-top: 2rem;
+}
+
+.pc{
+    margin-bottom: .5rem;
+}
+.parr{
+    color: #fffff8;
+}
+.parr h3{
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+
+.parr a{
+    text-decoration: none;
+    color: orange;
+}
+.trans{
+    background-color: rgba(47, 65, 75, 0.5);
+    display: flex;
+    border-radius: .5rem;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+.trans p{
+    margin-bottom: 0;
+}
+
+.foot{
+    text-align: center;
+}
+
+footer h3{
+    margin-bottom: 0.5rem;
+}
+
+.redes{
+    height: 4rem;
+}
+.redes img{
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+.n{
+    background-color: rgba(255, 255, 248, 0.5);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.n p{
+    margin-bottom: .5rem; 
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type=submit]{
+    background-color: #fffff8;
+    padding: .5rem;
+    color: orange;
+    font-size: 1rem;
+    margin-top: .5rem;
+    font-weight: bold;
+    border: none;
+}
+
+/* ----------------TABLET--------------------- */
+
+@media screen and (min-width: 576px) {
+    
+
+    h2, h3{
+        text-align: center;
+    }
+
+    p{
+        text-align: justify;
+    }    
+
+    #nosotros, #visitanos, #camperitos, #voluntariado, footer{
+        padding: 2rem 4rem;
+    }
+
+    .contenedor{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mapa{
+        width: auto;
+        height: 20rem;
+    }
+
+    #galeria img{
+        margin: 1rem;
+    }
+
+    .club .fotos-2{
+        display: flex;
+        
+    }
+    .fotos-2 .f-1{
+        margin-right: 3rem;
+    }
+
+    .pc{
+        text-align: center;
+    }
+    .trans{
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .parr{
+        text-align: left;
+    }
+    .parr h3{
+        text-align: left;
+    }
+
+    .trans p{
+        text-align: left;
+    }
+
+    .d{
+        margin-left: 2rem;
+    }
+
+    .foot{
+        display: flex;
+    }
+
+    .foot{
+        justify-content: space-between;
+    }
+    
+    footer h3{
+        text-align: left;
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .redes img{
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* --------------------PC--------------------- */
+
+@media screen and (min-width: 991px) {
+
+
+    header{
+        display: flex;
+        align-items: center;
+    }
+
+    
+    nav{
+        flex: 1;
+    }
+
+    #barra{
+        flex-direction: row;
+        justify-content: flex-end;
+        height: auto;
+        top: auto;
+        margin: 1rem 11rem;
+        width: 80%;
+        background-color: transparent;
+        transition: none;
+    
+    }
+    
+    #barra li{
+        margin: 0 1rem;
+        width: 14%;
+    }
+    
+    #barra li a:hover{
+        color: orange;
+    }
+
+    #barra li a{
+        padding: 0.5rem 0;
+    }
+
+    #burger{
+        display: none;;
+    }
+
+    .boton{
+        margin: 0 1rem;
+    }
+    .boton:hover{
+        background-color: aliceblue;
+    }
+    
+    #nosotros, #visitanos, #camperitos, #voluntariado, footer{
+        padding: 3rem 6rem;
+    }
+
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .txt{
+        width: 100%;
+        margin-right: 4rem;
+    }
+
+    .contenedor-2{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .txt-d{
+        width: 100%;
+        margin-left: 4rem;
+    }
+
+    .mapa{
+        width: 80rem;
+        height: 30rem;
+    }
+
+    .parrafo .cont{
+        display: flex;
+    }
+    .cont{
+        margin: 4rem 0 ;
+    }
+    .cont-1 {
+        display: flex;
+        flex-direction: row;
+    }
+    .cont, .cont-1{
+        align-items: center;
+    }
+    .parrafo ul li, .cont ul li, .cont-1 ol li {
+        text-align: justify;
+    }
+
+    .txti{
+        margin-right: 2rem;
+        width: 150%;
+    }
+
+    .txtd{
+        margin-left: 2rem;
+        width: 180%;
+    }
+   #camperitos h3{
+        margin-top: 0;
+
+   }
+
+   .antes{
+    margin-top: 3rem;
+   }
+
+   .vol{
+        display: flex;
+        align-items: center;        
+    }
+
+    .txtv{
+        margin-right: 2rem;
+        width: 150%;
+    }
+
+    .txtv2{
+        display: flex;
+    }
+
+    .txtv2 .p2{
+         margin-right: 1rem;
+    }
+
+    .p3{
+        margin-left: 1rem;
+    }
+
+}
